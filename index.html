@@ -181,10 +181,15 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
           <h2 class="title is-3">Algorithm</h2>
-          <div class="content has-text-justified">
-            <img class="algorithm" src="./static/images/droneFigure.png" style="width: 80%; margin-top: -50px" />
-            Graphical depiction of the MPC formulation combining both player's rollouts in the loss function for the proposed MPG-guided adversarial PINN training.
-          </div>
+           <div class="content has-text-centered">
+             <img class="algorithm" src="./static/images/droneFigure.png" style="width: 80%; margin-bottom: 20px;" />
+           </div>
+           <div class="content has-text-justified">
+             Graphical depiction of the MPC formulation combining both player's rollouts in the loss function for the proposed MPG-guided adversarial PINN training.
+             We augment the training loss function for the neural net, combining the MPC rollouts for both players as an additional loss term to the traditional PDE loss. 
+             Essentially, for each player, we generate its own actions using sampling based MPC, and the opponents actions from the current approximation of the learned value 
+             at each timestep along the trajectory rollout.
+           </div>
         </div>
       </div>
     </div>
