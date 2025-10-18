@@ -51,7 +51,7 @@
     </div>
     <div class="navbar-menu">
       <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-        <a class="navbar-item" href="https://stonkens.github.io">
+        <a class="navbar-item" href="https://land-dev.github.io/ryanteoh/">
           <span class="icon">
             <i class="fas fa-home"></i>
           </span>
@@ -62,14 +62,7 @@
             More Research
           </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://stonkens.github.io/hj-patch">
-              Patching neural barriers
-            </a>
-            <a class="navbar-item" href="https://stonkens.github.io/back2base">
-              Back to Base
-            </a>
-            <a class="navbar-item" href="https://stonkens.github.io/space2time">Space to Time</a>
-            <a class="navbar-item" href="https://stonkens.github.io/madr">MADR</a>
+            <a class="navbar-item" href="https://land-dev.github.io/madr/">MADR</a>
           </div>
         </div>
       </div>
@@ -86,26 +79,28 @@
             <h1 class="title is-1 publication-title">MADR: MPC-Guided Adversarial DeepReach</h1>
             <div class="is-size-5 publication-authors">
 	            <span class="author-block">
-                <a href="https://land-dev.github.io/ryanteoh/"></a>Ryan Teoh*</a>,
+                <a href="https://land-dev.github.io/ryanteoh/">Ryan Teoh<sup>1,*</sup></a>,
               </span>
               <span class="author-block">
-                <a href="https://stonkens.github.io">Sander Tonkens*</a>,</span>
+                <a href="https://stonkens.github.io">Sander Tonkens<sup>2,*</sup></a>,</span>
               <span class="author-block">
-                <a href="https://willsharpless.github.io">William Sharpless</a>,</span>
+                <a href="https://willsharpless.github.io">William Sharpless<sup>2</sup></a>,</span>
               <span class="author-block">
-                <a href="https://thezeyuanfeng.github.io">Zeyuan Feng</a>,</span>
+                Aijia Yang<sup>2</sup>,</span>
               <span class="author-block">
-                Aijia Yang,</span>
+                <a href="https://thezeyuanfeng.github.io">Zeyuan Feng<sup>3</sup></a>,</span>
               <span class="author-block">
-                <a href="https://smlbansal.github.io">Somil Bansal</a>,</span>
+                <a href="https://smlbansal.github.io">Somil Bansal<sup>3</sup></a>,</span>
               <span class="author-block">
-                <a href="http://sylviaherbert.com">Sylvia Herbert</a>
+                <a href="http://sylviaherbert.com">Sylvia Herbert<sup>2</sup></a>
               </span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block">University of California, San Diego (* denotes equal contribution)</span>
-              <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
+              <span class="author-block"><sup>1</sup>University of California, Los Angeles</span>
+              <span class="author-block"><sup>2</sup>University of California, San Diego</span>
+              <span class="author-block"><sup>3</sup>Stanford University</span>
+              <span class="author-block"><sup>*</sup>Authors contributed equally</span>
             </div>
 
             <div class="column has-text-centered">
@@ -140,12 +135,44 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="column is-centered has-text-centered">
-        <img class="algorithm" src="./static/images/coming_soon.jpg" style="width: 60%; margin-top: -50px" />
+        <img class="algorithm" src="./static/images/MADR_frontfig.png" style="width: 60%; margin-top: -50px" />
       </div>
       <h3 class="subtitle has-text-justified" style="font-size: 14px; color: #444444;">
-        <span class="small-caps-text">Coming soon!</span>
+        <span class="small-caps-text">A graphical abstract of MADR and the robotic experiments. In this work, we propose enriching self-supervised learning of HJ-PDE's, i.e. DeepReach, with supervision given by the best sampled game rollout (top left), 
+          where the opponents policy is defined by the current value approximation (top right). We demonstrate this approach performs across games with general dynamics (bottom), namely with TurtleBots, Drones and Humanoid experiments.</span>
       </h3>
       <hr class="section-divider">
+    </div>
+  </section>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+             Hamilton-Jacobi (HJ) Reachability offers a framework for generating safe value functions and policies in the face of adversarial disturbance, but is limited by the curse of dimensionality. Physics-informed deep learning is able to overcome this infeasibility, 
+             but itself suffers from slow and inaccurate convergence, primarily due to weak PDE gradients and the complexity of self-supervised learning. A few works, recently, have demonstrated that enriching the self-supervision process with regular supervision 
+             (based on the nature of the optimal control problem), greatly accelerates convergence and solution quality, however, these have been limited to single player problems and simple games. In this work, we introduce <span class="small-caps-text">MADR</span>, 
+             a general framework to robustly approximate the two-player, zero-sum differential game value function. In doing so, <span class="small-caps-text">MADR</span> yields the corresponding optimal strategies for both players in zero-sum games as well as safe policies 
+             for worst-case robustness. We test <span class="small-caps-text">MADR</span> on a multitude of high-dimensional simulated and real robotic agents with varying dynamics and games, finding that our approach significantly out-performs state-of-the-art baselines in 
+             simulation and produces impressive results in hardware.
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Paper video. -->
+      <!-- <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div> -->
+      <!--/ Paper video. -->
     </div>
   </section>
 
